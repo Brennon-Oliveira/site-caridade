@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: var(--black);
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+h1, h2, h3, a{
+    font-family: 'Fira Sans';
+    font-weight: 300;
+}
+
+p, span, label, button {
+    font-family: 'Open Sans';
+    font-weight: 400;
+}
+
+.red {
+    color: var(--red)!important;
+}
+
+.blue {
+    color: var(--blue)!important;
+}
+
+@media (max-width: 1080px){
+    html {
+        font-size: 93.75%;
+    }
+}
+@media (max-width: 720px){
+    html {
+        font-size: 87.5%;
+    }
+}

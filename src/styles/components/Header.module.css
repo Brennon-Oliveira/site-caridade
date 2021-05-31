@@ -1,0 +1,119 @@
+#header {
+    background-color: transparent;
+    padding: 1rem 0;
+}
+
+#header:global(.default) {
+    border-bottom: 1px solid var(--black);
+}
+
+#header :global(.container) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header h1 a {
+    font-size: 2rem;
+}
+
+#header h1 a:hover {
+    text-decoration:underline;
+}
+
+#header ul {
+    display: flex;
+    gap: 1.10rem;
+}
+
+#header ul li a {
+    font-size: 1.5rem;
+    transition: font-size .3s;
+}
+
+#header ul li a:hover {
+    font-size: 1.75rem;
+}
+
+@media screen and (max-width: 720px){
+    #header button {
+        height: 35px;
+        border: none;
+        background: transparent;
+    }
+
+    #header span {
+        display: inline-block;
+        height: 4px;
+        width: 2.5rem;
+        color: var(--black);
+        background-color: var(--black);
+    }
+
+    #header span::before, #header span::after {
+        content: '';
+        background-color: currentColor;
+        width: 2.5rem;
+        height: 4px;
+        display: block;
+        position: relative;
+        transition: .3s;
+    }
+
+    #header span::before {
+        top: -.58rem
+    }
+
+    #header span::after {
+        top: .4rem;
+    }
+
+    #header nav:global(.active) span {
+        background-color:transparent;
+    }
+
+    #header nav:global(.active) span::before {
+        transform: rotate(135deg);
+        top: -1px;
+    }
+
+    #header nav:global(.active) span::after {
+        transform: rotate(-135deg);
+        top: -5px;
+    }
+
+    #header nav ul {
+        display:grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        background-color: var(--footer);
+        height: 0px;
+        z-index: 900;
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        width:100%;
+        top: 64px;
+        left: 0;
+        overflow-y: hidden;
+        transition: .8s;
+    }
+
+    #header nav ul a {
+        color: var(--white);
+        display: block;
+        padding: 1rem 0;
+        text-align: center;
+        background-color: var(--footer);
+    }
+
+    #header ul li a:hover {
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
+
+    #header nav:global(.active) ul {
+        visibility: visible;
+        height: 280px;
+    }
+}
