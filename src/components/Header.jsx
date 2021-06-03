@@ -18,7 +18,7 @@ export default function Header(props){
     return (
         <header id={styles.header} className={props.type}>
             <div className="container">
-                <h1><a href="">Site Caridade</a></h1>
+                <h1><a href="">Site Caridade {process.env.API_URL}</a></h1>
                 <nav>
                     <button><span></span></button>
                     <ul>
