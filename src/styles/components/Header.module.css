@@ -20,6 +20,9 @@
 #header h1 a:hover {
     text-decoration:underline;
 }
+#header button {
+    display: none;
+}
 
 #header ul {
     display: flex;
@@ -40,6 +43,8 @@
         height: 35px;
         border: none;
         background: transparent;
+        display: block;
+        cursor: pointer;
     }
 
     #header span {

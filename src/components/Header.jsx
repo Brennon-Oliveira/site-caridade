@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import styles from './../styles/components/Header.module.css';
+import { PROJECT_NAME } from '../consts'
 
 export default function Header(props){
 
@@ -18,7 +19,7 @@ export default function Header(props){
     return (
         <header id={styles.header} className={props.type}>
             <div className="container">
-                <h1><a href="">Site Caridade {process.env.API_URL}</a></h1>
+                <h1><a href="">{ PROJECT_NAME }</a></h1>
                 <nav>
                     <button><span></span></button>
                     <ul>
