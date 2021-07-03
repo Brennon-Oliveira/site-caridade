@@ -11,7 +11,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .75);
+    background-color: rgba(0, 0, 0, .85);
     z-index: 1;
 }
 
@@ -36,7 +36,7 @@
     border: 1px solid var(--white);
     padding: .5rem 2rem;
     border-radius: 20px;
-    transition: background-color .3s, font-weight .3s, color .3s ;
+    transition: background-color .3s, font-weight .3s, color .3s;
 }
 
 #howHelpUs a:hover {

@@ -12,8 +12,8 @@ export default function HowHelpUs(){
         <section id={style.howHelpUs} >
             <div className={style.overlay}></div>
             <div className="container-min">
-                <h2 className="title white">Como nos ajudar</h2>
-                <p>
+                <h2 data-aos="fade-left" className="title white">Como nos ajudar</h2>
+                <p data-aos="fade-right">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Phasellus ultrices eget metus ut ultricies. Vestibulum
                     convallis aliquam tellus ac suscipit. Maecenas luctus, ex
@@ -24,7 +24,7 @@ export default function HowHelpUs(){
                     et, vestibulum elit. Curabitur a facilisis libero. Interdum
                     et malesuada fames ac ante ipsum primis in faucibus.
                 </p>
-                <p>
+                <p data-aos="fade-left">
                     Fusce rhoncus sed ex et maximus. In hac habitasse platea
                     dictumst. Vivamus aliquet ante eu dui scelerisque,
                     euultricies nibh volutpat. Aenean fringilla risus nunc,
@@ -34,7 +34,7 @@ export default function HowHelpUs(){
                     vestibulum.
                 </p>
                 <div>
-                    <a href="">Doar</a>
+                    <a data-aos="fade-right" href="">Doar</a>
                 </div>
             </div>
         </section>
