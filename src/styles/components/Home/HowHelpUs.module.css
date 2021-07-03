@@ -40,7 +40,7 @@
 }
 
 #howHelpUs a:hover {
-    font-weight: bold;
+    font-weight: normal;
     background-color: var(--white);
     color: var(--black);
 }

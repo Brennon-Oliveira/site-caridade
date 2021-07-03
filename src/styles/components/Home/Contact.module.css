@@ -1,0 +1,29 @@
+.header {
+    margin-bottom:1.75rem;
+    text-align: center;
+}
+
+.header h2 {
+    margin-bottom: 0;
+}
+
+.header p {
+    color: var(--black);
+    font-size: .9rem;
+}
+
+.changeForm {
+    cursor: pointer;
+}
+
+.changeForm:hover {
+    text-decoration: underline;
+}
+
+.changeForm.contact {
+    color: var(--green); 
+}
+
+.changeForm.report {
+    color: var(--red);
+}
