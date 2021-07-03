@@ -35,6 +35,10 @@ h2.title {
     padding: 0 2%;
 }
 
+section {
+    padding: 30px 0;
+}
+
 h1, h2, h3, a{
     font-family: 'Fira Sans';
     font-weight: 300;

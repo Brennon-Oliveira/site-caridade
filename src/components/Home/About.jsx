@@ -1,12 +1,19 @@
 import style from '../../styles/components/Home/About.module.css';
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from 'react';
 
 export default function About(){
+
+    useEffect(()=>{
+        Aos.init({ duration: 2000 });
+    },[])
 
     return(
         <section id={style.about}>
             <div className="container-min">
-                <h2 className="title white">Sobre</h2>
-                <p>
+                <h2 data-aos="fade-down" className="title white">Sobre</h2>
+                <p data-aos="fade-up">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Phasellus ultrices eget metus ut ultricies. Vestibulum convallis
                     aliquam tellus ac suscipit. Maecenas luctus, ex in rhoncus
@@ -17,7 +24,7 @@ export default function About(){
                     Curabitur a facilisis libero. Interdum et malesuada fames ac 
                     ante ipsum primis in faucibus.
                 </p>
-                <p>
+                <p data-aos="fade-up">
                     Fusce rhoncus sed ex et maximus. In hac habitasse platea 
                     dictumst. Vivamus aliquet ante eu dui scelerisque, eu ultricies 
                     nibh volutpat. Aenean fringilla risus nunc, imperdiet ornare 
