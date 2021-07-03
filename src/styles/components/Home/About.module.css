@@ -1,0 +1,10 @@
+#about {
+    background-color: var(--black);
+    padding: 30px 0;
+}
+
+#about p {
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}

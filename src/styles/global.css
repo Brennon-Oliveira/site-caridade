@@ -7,8 +7,29 @@
     color: var(--black);
 }
 
+h2.title {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1.75rem;
+}
+
+.white {
+    color: var(--white);
+}
+
+.black {
+    color: var(--black);
+}
+
 .container {
     max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.container-min {
+    max-width: 900px;
     width: 100%;
     margin: 0 auto;
     padding: 0 2%;
