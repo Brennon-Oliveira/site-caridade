@@ -35,8 +35,8 @@ export default function HowHelpUs(){
                     tincidunt cursus tortor. Nam viverra est vel iaculis
                     vestibulum.
                 </p>
-                <div>
-                    <a data-aos="fade-right" href="#">
+                <div data-aos="fade-right">
+                    <a href="#" >
                         Doar
                     </a>
                 </div>

@@ -7,6 +7,10 @@
     color: var(--black);
 }
 
+body {
+    background-color: var(--white-background);
+}
+
 h2.title {
     text-align: center;
     font-size: 1.75rem;

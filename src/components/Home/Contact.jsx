@@ -1,24 +1,81 @@
 import style from "../../styles/components/Home/Contact.module.css";
-import { Aos } from 'aos';
-import { useState } from 'react';
+import Aos from 'aos';
+import { useState, useEffect } from 'react';
 
 export default function Contact(){
 
-    const [changeFormColor, setChangeFormColor] = useState('contact')
+    const [
+        isReport,
+        setIsReport
+    ] = useState(true)
+    const [
+        changeFormColor,
+        setChangeFormColor
+    ] = useState('report')
+    const [
+        changeFormContent,
+        setChangeFormContent
+    ] = useState('Reportar um erro')
+    const [
+        changeFormTitle,
+        setChangeFormTitle
+    ] = useState('Entre em contato')
+    const [
+        messageContent,
+        setMessageContent
+    ] = useState("Sua mensagem...")
+    const [
+        submitButtonContent,
+        setSubmitButtonContent
+    ] = useState("Enviar!")
+    const [
+        emailToSend,
+        setEmailToSend
+    ] = useState("contato@sitecaridade.com.br");
 
-    // /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+    useEffect(()=>{
+        Aos.init()
+    },[])
+
+    function changeForm(){
+        if(isReport) {
+            setIsReport(false)
+            setChangeFormColor('contact')
+            setChangeFormContent('Entrar em contato')
+            setChangeFormTitle('Reportar um erro')
+            setMessageContent('Seu reporte...')
+            setSubmitButtonContent('Reportar!')
+            setEmailToSend('report@sitecaridade.com.br')
+        } else {
+            setIsReport(true)
+            setChangeFormColor('report')
+            setChangeFormContent('Reportar um erro')
+            setChangeFormTitle('Entrar em contato')
+            setMessageContent('Sua mensagem...')
+            setSubmitButtonContent('Enviar!')
+            setEmailToSend('contato@sitecaridade.com.br')
+        }
+    }
 
     return(
         <section id={style.contact}>
             <div className="container-min">
                 <div className={style.header}>
-                    <h2 className="title black">Entre em contato</h2>
-                    <p>E-Mail: contato@sitecaridade.com.br</p>
+                    <h2 className="title black">
+                        {changeFormTitle}
+                    </h2>
+                    <p>E-Mail: {emailToSend}</p>
                     <p>Telefone: +55 (62) 97756-7313</p>
-                    <p className={`${style.changeForm} ${style[changeFormColor]}`}>Reportar um erro</p>
+                    <p 
+                        onClick={changeForm}
+                        className={`
+                            ${style.changeForm} 
+                            ${style[changeFormColor]}
+                        `}
+                    >{changeFormContent}</p>
                 </div>
                 <form className={style.form}>
-                    <div className="wrapper">
+                    <div className={style.wrapper}>
                         <label htmlFor="name">
                             Nome:
                         </label>
@@ -29,7 +86,7 @@ export default function Contact(){
                             name="name"
                         />
                     </div>
-                    <div className="wrapper">
+                    <div className={style.wrapper}>
                         <label htmlFor="email">
                             E-Mail:
                         </label>
@@ -40,7 +97,7 @@ export default function Contact(){
                             name="email"
                         />
                     </div>
-                    <div className="wrapper">
+                    <div className={style.wrapper}>
                         <label htmlFor="phone">
                             Numero:
                         </label>
@@ -51,19 +108,19 @@ export default function Contact(){
                             name="phone"
                         />
                     </div>
-                    <div className="wrapper">
+                    <div className={style.wrapper}>
                         <label htmlFor="message">
                             Mensagem:
                         </label>
                         <textarea
                             name="message"
                             id="message"
-                            placeholder="Sua mensagem..."
+                            placeholder={messageContent}
                         ></textarea>
                     </div>
-                    <div className="wrapper btn">
+                    <div className={`${style.wrapper} ${style.btn}`}>
                         <button type="submit">
-                            Enviar!
+                            {submitButtonContent}
                         </button>
                     </div>
                 </form>
