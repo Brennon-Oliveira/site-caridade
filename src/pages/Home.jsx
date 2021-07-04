@@ -2,7 +2,7 @@ import Banner from "../components/Home/Banner";
 import About from '../components/Home/About';
 import HowHelpUs from '../components/Home/HowHelpUs';
 import Contact from '../components/Home/Contact';
-import FooterNav from '../components/Home/FooterNav';
+import Footer from '../components/Footer';
 
 export default function Home(){
 
@@ -12,7 +12,7 @@ export default function Home(){
             <About />
             <HowHelpUs />
             <Contact />
-            <FooterNav />
+            <Footer />
         </>
     )
 }

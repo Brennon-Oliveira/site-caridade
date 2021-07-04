@@ -1,4 +1,4 @@
-import style from '../../styles/components/Home/FooterNav.module.css';
+import style from '../../styles/components/subComponents/FooterNav.module.css';
 
 export default function FooterNav(){
 

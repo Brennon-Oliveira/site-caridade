@@ -1,0 +1,37 @@
+#lastFooter {
+    background-color: var(--black);
+    padding: 15px 0;
+}
+
+#lastFooter > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lastFooter * {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+#lastFooter p {
+    font-family: 'Fira Sans';
+    font-weight: 300;
+}
+
+#lastFooter a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+#lastFooter a:hover {
+    text-decoration: underline;
+}
+
+#lastFooter svg {
+    stroke:var(--white);
+    stroke-width:2;
+    line-height: 40px;
+    /* stroke-linecap:square */
+}
