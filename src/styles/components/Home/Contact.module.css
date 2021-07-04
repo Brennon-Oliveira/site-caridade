@@ -102,6 +102,6 @@
 .wrapper :global(.formError){
     border-color: var(--red);
     border-width: 2px;
-    color: red !important;
+    color: var(--red) !important;
     font-weight: bold !important;
 }

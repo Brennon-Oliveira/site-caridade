@@ -19,7 +19,10 @@ export default function Header(props){
     return (
         <header id={styles.header} className={props.type}>
             <div className="container">
-                <h1><a href="">{ PROJECT_NAME }</a></h1>
+                <h1>
+                    <a href="">{ PROJECT_NAME }</a>
+                    <div></div>
+                </h1>
                 <nav>
                     <button><span></span></button>
                     <ul>

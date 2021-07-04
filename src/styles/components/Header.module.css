@@ -17,8 +17,15 @@
     font-size: 2rem;
 }
 
-#header h1 a:hover {
-    text-decoration:underline;
+#header h1 div {
+    width: 25px;
+    height: 2px;
+    background-color: var(--black);
+    transition: width .3s;
+}
+
+#header h1 a:hover + div {
+    width: 100%;
 }
 #header button {
     display: none;
