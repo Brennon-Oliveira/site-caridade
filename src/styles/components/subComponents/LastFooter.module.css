@@ -35,3 +35,10 @@
     line-height: 40px;
     /* stroke-linecap:square */
 }
+
+@media screen and (max-width:570px) {
+    #lastFooter > div {
+       flex-direction: column;
+       gap: 1rem;
+    }
+}
