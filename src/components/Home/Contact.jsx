@@ -61,11 +61,11 @@ export default function Contact(){
         <section id={style.contact}>
             <div className="container-min">
                 <div className={style.header}>
-                    <h2 className="title black">
+                    <h2 data-aos="fade-left" className="title black">
                         {changeFormTitle}
                     </h2>
-                    <p>E-Mail: {emailToSend}</p>
-                    <p>Telefone: +55 (62) 97756-7313</p>
+                    <p data-aos="fade-right">E-Mail: {emailToSend}</p>
+                    <p data-aos="fade-left">Telefone: +55 (62) 97756-7313</p>
                     <p 
                         onClick={changeForm}
                         className={`
@@ -75,7 +75,7 @@ export default function Contact(){
                     >{changeFormContent}</p>
                 </div>
                 <form className={style.form}>
-                    <div className={style.wrapper}>
+                    <div data-aos="flip-right" className={style.wrapper}>
                         <label htmlFor="name">
                             Nome:
                         </label>
@@ -86,7 +86,7 @@ export default function Contact(){
                             name="name"
                         />
                     </div>
-                    <div className={style.wrapper}>
+                    <div data-aos="flip-right" className={style.wrapper}>
                         <label htmlFor="email">
                             E-Mail:
                         </label>
@@ -97,7 +97,7 @@ export default function Contact(){
                             name="email"
                         />
                     </div>
-                    <div className={style.wrapper}>
+                    <div data-aos="flip-right" className={style.wrapper}>
                         <label htmlFor="phone">
                             Numero:
                         </label>
@@ -108,7 +108,7 @@ export default function Contact(){
                             name="phone"
                         />
                     </div>
-                    <div className={style.wrapper}>
+                    <div data-aos="flip-right" className={style.wrapper}>
                         <label htmlFor="message">
                             Mensagem:
                         </label>
@@ -118,7 +118,7 @@ export default function Contact(){
                             placeholder={messageContent}
                         ></textarea>
                     </div>
-                    <div className={`${style.wrapper} ${style.btn}`}>
+                    <div data-aos="flip-left" className={`${style.wrapper} ${style.btn}`}>
                         <button type="submit">
                             {submitButtonContent}
                         </button>
