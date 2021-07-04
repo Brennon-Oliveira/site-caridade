@@ -9,6 +9,7 @@
 
 body {
     background-color: var(--white-background);
+    overflow-x: hidden;
 }
 
 h2.title {
