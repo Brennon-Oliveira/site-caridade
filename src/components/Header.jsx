@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import styles from './../styles/components/Header.module.css';
+import { Element } from 'react-scroll';
 import { PROJECT_NAME } from '../consts'
+import A from './A';
 
 export default function Header(props){
 
@@ -18,7 +20,7 @@ export default function Header(props){
     
     return (
         <header id={styles.header} className={props.type}>
-            <div className="container">
+            <Element name="Home" className="container">
                 <h1>
                     <a href="">{ PROJECT_NAME }</a>
                     <div></div>
@@ -26,14 +28,14 @@ export default function Header(props){
                 <nav>
                     <button><span></span></button>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Posts</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#" className="red">Doar</a></li>
-                        <li><a href="#" className="blue">Entrar</a></li>
+                        <li><A>Home</A></li>
+                        <li><A page='posts'>Posts</A></li>
+                        <li><A to='Contact'>Contato</A></li>
+                        <li><A href="#" className="red">Doar</A></li>
+                        <li><A page='login' className="blue">Entrar</A></li>
                     </ul>
                 </nav>
-            </div>
+            </Element>
         </header>
     )
 }

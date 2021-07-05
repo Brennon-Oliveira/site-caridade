@@ -1,6 +1,7 @@
 import style from '../../styles/components/Home/HowHelpUs.module.css';
 import Aos from 'aos';
 import { useEffect } from 'react';
+import { Element } from 'react-scroll';
 
 export default function HowHelpUs(){
 
@@ -11,7 +12,7 @@ export default function HowHelpUs(){
     return(
         <section id={style.howHelpUs} >
             <div className={style.overlay}></div>
-            <div className="container-min">
+            <Element name="HowHelpUs" className="container-min">
                 <h2 data-aos="fade-left" className="title white">
                     Como nos ajudar
                 </h2>
@@ -40,7 +41,7 @@ export default function HowHelpUs(){
                         Doar
                     </a>
                 </div>
-            </div>
+            </Element>
         </section>
     )
 }

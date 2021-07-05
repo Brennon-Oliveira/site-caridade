@@ -2,6 +2,7 @@ import style from "../../styles/components/Home/Contact.module.css";
 import Aos from 'aos';
 import { useState, useEffect } from 'react';
 import InputMask from "react-input-mask";
+import { Element } from 'react-scroll';
 
 export default function Contact(){
 
@@ -185,7 +186,7 @@ export default function Contact(){
 
     return(
         <section id={style.contact}>
-            <div className="container-min">
+            <Element name="Contact" className="container-min">
                 <div className={style.header}>
                     <h2 data-aos="fade-left" className="title black">
                         {changeFormTitle}
@@ -266,7 +267,7 @@ export default function Contact(){
                         </button>
                     </div>
                 </form>
-            </div>
+            </Element>
         </section>
     )
 }

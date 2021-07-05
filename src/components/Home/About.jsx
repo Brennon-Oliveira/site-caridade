@@ -1,6 +1,7 @@
 import style from '../../styles/components/Home/About.module.css';
 import Aos from "aos";
 import "aos/dist/aos.css"
+import { Element } from 'react-scroll';
 import { useEffect } from 'react';
 
 export default function About() {
@@ -11,7 +12,7 @@ export default function About() {
 
     return (
         <section id={style.about}>
-            <div className="container-min">
+            <Element name="About" className="container-min">
                 <h2 data-aos="fade-left" className="title white">Sobre</h2>
                 <p data-aos="fade-right">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -32,7 +33,7 @@ export default function About() {
                     leo, sollicitudin at tellus at, tincidunt cursus tortor. Nam
                     viverra est vel iaculis vestibulum.
                 </p>
-            </div>
+            </Element>
         </section>
     )
 }
