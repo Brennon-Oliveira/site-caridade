@@ -32,7 +32,7 @@ export default function DonationModal(){
                     <CurrencyInput
 
                     onChange={(e)=>{changeDonation(e)}}
-                    placeholder="$0.00" type="text"
+                    placeholder="R$0,00" type="text"
                 />
                 </div>
                 <div className={style.buttons} >

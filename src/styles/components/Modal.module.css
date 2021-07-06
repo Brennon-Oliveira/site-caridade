@@ -61,7 +61,7 @@
 }
 
 .wrapper {
-    min-width: 350px;
+    min-width: 50px;
     margin-bottom: 1rem;
 }
 
@@ -70,6 +70,11 @@
     height: 42px;
     border: 1px solid var(--black);
     padding-left: 8px;
+    color: var(--black);
+}
+
+.wrapper input::placeholder {
+    color: var(--black);
 }
 
 .buttons {
