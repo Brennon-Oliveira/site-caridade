@@ -1,6 +1,11 @@
 import style from '../../styles/components/subComponents/FooterNav.module.css';
+import { useContext } from 'react';
+import { AppContext } from '../../contexts/AppContext';
+import A from '../A';
 
 export default function FooterNav(){
+
+    const { openDonationModal } = useContext(AppContext)
 
     return(
         <section id={style.footerNav}>
@@ -11,31 +16,34 @@ export default function FooterNav(){
                     <nav>
                         <ul>
                             <li>
-                                <a href="">
+                                <A >
                                     Home
-                                </a>
+                                </A>
                                 <div></div>
                             </li>
                             <li>
-                                <a href="">
+                                <A page='login'>
                                     Entrar
-                                </a>
+                                </A>
                                 <div></div>
                             </li>
                             <li>
-                                <a href="">
+                                <A to='About'>
                                     Sobre
-                                </a>
+                                </A>
                                 <div></div>
                             </li>
                             <li>
-                                <a href="">
+                                <A to='Contact'>
                                     Contato
-                                </a>
+                                </A>
                                 <div></div>
                             </li>
                             <li>
-                                <a href="">
+                                <a
+                                    href="#"
+                                    onClick={(e)=>{openDonationModal(e)}}
+                                >
                                     Doar
                                 </a>
                                 <div></div>

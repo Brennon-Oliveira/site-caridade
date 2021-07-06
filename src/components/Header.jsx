@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import styles from './../styles/components/Header.module.css';
 import { Element } from 'react-scroll';
 import { PROJECT_NAME } from '../consts'
+import { AppContext } from '../contexts/AppContext'
 import A from './A';
 
 export default function Header(props){
@@ -17,12 +18,14 @@ export default function Header(props){
         btn.addEventListener('touchstart',(e)=>{toggleMenu(e)})
         btn.addEventListener('click',(e)=>{toggleMenu(e)})
     },[])
+
+    const { openDonationModal } = useContext(AppContext)
     
     return (
         <header id={styles.header} className={props.type}>
             <Element name="Home" className="container">
                 <h1>
-                    <a href="">{ PROJECT_NAME }</a>
+                    <A href="#">{ PROJECT_NAME }</A>
                     <div></div>
                 </h1>
                 <nav>
@@ -31,7 +34,15 @@ export default function Header(props){
                         <li><A>Home</A></li>
                         <li><A page='posts'>Posts</A></li>
                         <li><A to='Contact'>Contato</A></li>
-                        <li><A href="#" className="red">Doar</A></li>
+                        <li>
+                            <a
+                                href="#"
+                                onClick={(e)=>{openDonationModal(e)}}
+                                className="red"
+                            >
+                                Doar
+                            </a>
+                        </li>
                         <li><A page='login' className="blue">Entrar</A></li>
                     </ul>
                 </nav>

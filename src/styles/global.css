@@ -7,7 +7,7 @@
     color: var(--black);
 }
 
-body {
+html, body {
     background-color: var(--white-background);
     overflow-x: hidden;
 }

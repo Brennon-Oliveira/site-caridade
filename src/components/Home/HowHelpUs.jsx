@@ -2,8 +2,12 @@ import style from '../../styles/components/Home/HowHelpUs.module.css';
 import Aos from 'aos';
 import { useEffect } from 'react';
 import { Element } from 'react-scroll';
+import { useContext } from 'react';
+import { AppContext } from '../../contexts/AppContext';
 
 export default function HowHelpUs(){
+
+    const { openDonationModal } = useContext(AppContext);
 
     useEffect(()=>{
         Aos.init({duration:1000})
@@ -37,7 +41,7 @@ export default function HowHelpUs(){
                     vestibulum.
                 </p>
                 <div data-aos="fade-right">
-                    <a href="#" >
+                    <a onClick={openDonationModal} href="#" >
                         Doar
                     </a>
                 </div>
