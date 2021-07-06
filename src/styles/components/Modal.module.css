@@ -69,6 +69,7 @@
     width: 100%;
     height: 42px;
     border: 1px solid var(--black);
+    padding-left: 8px;
 }
 
 .buttons {
