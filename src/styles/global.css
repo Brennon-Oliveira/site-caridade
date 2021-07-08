@@ -12,6 +12,27 @@ html, body {
     overflow-x: hidden;
 }
 
+#master-posts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+        "header header"
+        "aside content"
+        "footer footer";
+}
+
+.a{
+    grid-area: aside;
+    background-color: aqua;
+    height: 700px;
+}
+
+.b {
+    grid-area: content;
+    background-color: blueviolet;
+}
+
 h2.title {
     text-align: center;
     font-size: 1.75rem;

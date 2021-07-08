@@ -11,6 +11,11 @@ export function AppProvider(props){
         setDonationModalIsActive 
     ] = useState(false);
 
+    const [
+        curRoute,
+        setCurRoute
+    ] = useState(window.location.pathname)
+
     function openDonationModal(e){
         if(e) e.preventDefault()
         setDonationModalIsActive(true)
@@ -20,10 +25,17 @@ export function AppProvider(props){
         setDonationModalIsActive(false)
     }
 
+    function changeRoute(route){
+        setCurRoute('/'+route)
+        console.log(curRoute)
+    }
+
     return(
         <AppContext.Provider value={{
             openDonationModal,
-            closeDonationModal
+            closeDonationModal,
+            changeRoute,
+            curRoute,
         }}> 
             {props.children}
             { donationModalIsActive ? <DonationModal /> : ''}

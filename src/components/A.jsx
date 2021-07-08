@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import * as Scroll from 'react-scroll';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AppContext } from '../contexts/AppContext';
 
 export default function A(props){
 
@@ -16,6 +18,13 @@ export default function A(props){
     const [smooth, setSmooth] = useState(props.smooth || true);
     const [offset, setOffset] = useState(props.offset || -30);
 
+    const { changeRoute } = useContext(AppContext);
+
+    async function pre(){
+        changeRoute(page)
+        await scroll();
+    }
+
     async function scroll(){
         await setTimeout(()=>{},3000);
         Scroll.scroller.scrollTo(element,{
@@ -29,7 +38,7 @@ export default function A(props){
         <Link
             to={page}
             className={props.className}
-            onClick={scroll}
+            onClick={pre}
         >
             {props.children || 'Link'}
         </Link>

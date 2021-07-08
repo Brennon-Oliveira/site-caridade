@@ -1,6 +1,7 @@
 #header {
     background-color: transparent;
     padding: 1rem 0;
+    grid-area: header;
 }
 
 #header:global(.default) {
