@@ -1,0 +1,39 @@
+.input {
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 1.5rem;
+}
+
+.input textarea {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    font-size: 1.10rem;
+    padding: 8px;
+    resize: none;
+    outline: none;
+}
+
+.input textarea:focus {
+    border-width: 2px;
+}
+.input button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background-color: none;
+}
+
+.input button * {
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.75rem;
+}
+
+.input button *:hover {
+    color: var(--black-hover);
+}

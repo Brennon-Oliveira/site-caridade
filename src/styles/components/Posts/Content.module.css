@@ -1,0 +1,12 @@
+#content {
+    padding: 30px 4%;
+    height: 95vh;
+    overflow-y: scroll;
+}
+
+@media (max-width: 850px){
+    #content {
+        height: auto;
+        overflow-y: visible;
+    }
+}

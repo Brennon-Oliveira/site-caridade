@@ -1,6 +1,8 @@
 :root {
     --white: #FAF7FF;
     --black: #0c0c0c;
+    --black-hover: #181818;
+    --black-click: #1c1c1c;
     --white-background: #F3EED9;
     --text: #C9C9C9;
     --placeholder: #2F2F2F;

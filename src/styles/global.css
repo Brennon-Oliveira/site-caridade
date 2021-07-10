@@ -22,17 +22,6 @@ html, body {
         "footer footer";
 }
 
-.a{
-    grid-area: aside;
-    background-color: aqua;
-    height: 700px;
-}
-
-.b {
-    grid-area: content;
-    background-color: blueviolet;
-}
-
 h2.title {
     text-align: center;
     font-size: 1.75rem;
@@ -83,13 +72,62 @@ p, span, label, button {
     color: var(--blue)!important;
 }
 
+
 @media (max-width: 1080px){
     html {
         font-size: 93.75%;
+    }
+}
+@media (max-width: 850px){
+    #master-posts {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "aside"
+            "content"
+            "footer";
     }
 }
 @media (max-width: 720px){
     html {
         font-size: 87.5%;
     }
+}
+
+/* ScrollBar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--black);
+    border-radius: 100px;
+    border-right: 4px solid var(--white);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--black);
+    border-radius: 100px;
+    border-right: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--black-hover);
+}
+::-webkit-scrollbar-thumb:active {
+    background: var(--black-click);
+}
+::-webkit-scrollbar-track {
+    background: var(--white);
+    border: 0px none var(--white);
+    border-radius: 100px;
+}
+::-webkit-scrollbar-track:hover {
+    background: var(--white);
+}
+::-webkit-scrollbar-track:active {
+    background: var(--text);
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
 }

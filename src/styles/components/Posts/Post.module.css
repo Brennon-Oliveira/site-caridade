@@ -1,0 +1,52 @@
+#post {
+    border: 1px solid var(--black);
+    margin-bottom: 1rem;
+}
+
+#post > div {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2%;
+    gap: 1rem;
+}
+
+#post img {
+    width: 85px;
+    height: 85px;
+    border-radius: 85px;
+    border: 1px solid var(--black);
+}
+
+.content {
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.header button {
+    background-color: transparent;
+    border: none;
+}
+
+.header button * {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.header button:global(.notIsLiked) * {
+    color: var(--green);
+}
+
+.header button:global(.isLiked) * {
+    color: var(--red);
+}
+
+.content p {
+    font-size: 1rem;
+}
