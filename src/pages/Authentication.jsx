@@ -20,6 +20,10 @@ export default function Authentication() {
                             <label htmlFor="emaillogin">Email ou login</label>
                             <input
                                 type="text"
+                                value={emailLogin}
+                                onChange={(e) => {
+                                    setEmailLogin(e.target.value);
+                                }}
                                 placeholder="Sua senha ou login"
                                 id="emaillogin"
                             />
@@ -28,6 +32,10 @@ export default function Authentication() {
                             <label htmlFor="email">E-Mail</label>
                             <input
                                 type="text"
+                                value={password}
+                                onChange={(e) => {
+                                    setPassword(e.target.value);
+                                }}
                                 placeholder="Ex: joaosilva@gmail.com"
                                 id="email"
                             />
@@ -50,6 +58,10 @@ export default function Authentication() {
                             <label htmlFor="name">Nome</label>
                             <input
                                 type="text"
+                                value={name}
+                                onChange={(e) => {
+                                    setName(e.target.value);
+                                }}
                                 placeholder="Ex: João da Silva"
                                 id="name"
                             />
@@ -58,6 +70,10 @@ export default function Authentication() {
                             <label htmlFor="email">E-Mail</label>
                             <input
                                 type="text"
+                                value={email}
+                                onChange={(e) => {
+                                    setEmail(e.target.value);
+                                }}
                                 placeholder="Ex: joaosilva@gmail.com"
                                 name="email"
                             />
@@ -66,6 +82,10 @@ export default function Authentication() {
                             <label htmlFor="password">Senha</label>
                             <input
                                 type="text"
+                                value={password}
+                                onChange={(e) => {
+                                    setPassword(e.target.value);
+                                }}
                                 placeholder="Sua senha"
                                 id="password"
                             />
@@ -76,6 +96,10 @@ export default function Authentication() {
                             </label>
                             <input
                                 type="text"
+                                value={passwordReapeat}
+                                onChange={(e) => {
+                                    setPasswordReapeat(e.target.value);
+                                }}
                                 placeholder="Repita sua senha"
                                 id="passwordConfirm"
                             />
