@@ -9,6 +9,7 @@ export function AppProvider(props) {
     const [curRoute, setCurRoute] = useState(window.location.pathname);
 
     const [isAuth, setIsAuth] = useState(false);
+    const [userData, setUserData] = useState({});
 
     function openDonationModal(e) {
         if (e) e.preventDefault();
@@ -24,6 +25,11 @@ export function AppProvider(props) {
         console.log(curRoute);
     }
 
+    function logout() {
+        setIsAuth(false);
+        setUserData(false);
+    }
+
     return (
         <AppContext.Provider
             value={{
@@ -32,6 +38,10 @@ export function AppProvider(props) {
                 changeRoute,
                 curRoute,
                 isAuth,
+                setIsAuth,
+                userData,
+                setUserData,
+                logout,
             }}
         >
             {props.children}

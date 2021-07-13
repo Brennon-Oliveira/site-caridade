@@ -1,13 +1,12 @@
-import style from '../../styles/components/subComponents/FooterNav.module.css';
-import { useContext } from 'react';
-import { AppContext } from '../../contexts/AppContext';
-import A from '../A';
+import style from "../../styles/components/subComponents/FooterNav.module.css";
+import { useContext } from "react";
+import { AppContext } from "../../contexts/AppContext";
+import A from "../A";
 
-export default function FooterNav(){
+export default function FooterNav() {
+    const { openDonationModal, isAuth, logout } = useContext(AppContext);
 
-    const { openDonationModal } = useContext(AppContext)
-
-    return(
+    return (
         <section id={style.footerNav}>
             <div className="container">
                 <div className={style.wrapper}>
@@ -16,38 +15,50 @@ export default function FooterNav(){
                     <nav>
                         <ul>
                             <li>
-                                <A >
-                                    Home
-                                </A>
+                                <A>Home</A>
                                 <div></div>
                             </li>
                             <li>
-                                <A page='login'>
-                                    Entrar
-                                </A>
+                                {!isAuth ? (
+                                    <A page="login">Entrar</A>
+                                ) : (
+                                    <A page="user">Seu perfil</A>
+                                )}
                                 <div></div>
                             </li>
                             <li>
-                                <A to='About'>
-                                    Sobre
-                                </A>
+                                <A to="About">Sobre</A>
                                 <div></div>
                             </li>
                             <li>
-                                <A to='Contact'>
-                                    Contato
-                                </A>
+                                <A to="Contact">Contato</A>
                                 <div></div>
                             </li>
                             <li>
                                 <a
                                     href="#"
-                                    onClick={(e)=>{openDonationModal(e)}}
+                                    onClick={(e) => {
+                                        openDonationModal(e);
+                                    }}
                                 >
                                     Doar
                                 </a>
                                 <div></div>
                             </li>
+                            {isAuth && (
+                                <li>
+                                    <a
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            logout();
+                                        }}
+                                    >
+                                        Sair
+                                    </a>
+                                    <div></div>
+                                </li>
+                            )}
                         </ul>
                     </nav>
                 </div>
@@ -100,5 +111,5 @@ export default function FooterNav(){
                 </div>
             </div>
         </section>
-    )
+    );
 }
