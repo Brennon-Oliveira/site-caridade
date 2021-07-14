@@ -8,7 +8,7 @@ export function AppProvider(props) {
 
     const [curRoute, setCurRoute] = useState(window.location.pathname);
 
-    const [isAuth, setIsAuth] = useState(false);
+    const [isAuth, setIsAuth] = useState(true);
     const [userData, setUserData] = useState({});
 
     function openDonationModal(e) {

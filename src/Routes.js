@@ -7,6 +7,7 @@ import { useState, useContext } from "react";
 import Posts from "./pages/Posts";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Authentication from "./pages/Authentication";
+import CurrentUser from "./pages/CurrentUser";
 
 export default function Routes() {
     const [notShowHeader, setNotShowHeader] = useState([
@@ -31,6 +32,9 @@ export default function Routes() {
                     </Route>
                     <ProtectedRoute path="/posts">
                         <Posts />
+                    </ProtectedRoute>
+                    <ProtectedRoute path="/user">
+                        <CurrentUser />
                     </ProtectedRoute>
                     <Route path="/">
                         <Home />

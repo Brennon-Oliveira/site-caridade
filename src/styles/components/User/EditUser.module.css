@@ -1,0 +1,102 @@
+#editUser > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#editUser > div > div {
+    padding: 0 2rem;
+}
+#editUser h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.description p {
+    font-size: 1rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.wrapper label {
+    font-size: 1rem;
+}
+
+.wrapper label::after {
+    content: ":";
+}
+
+.wrapper input {
+    height: 30px;
+    border: 1px solid var(--black);
+}
+
+.warning {
+    border: 2px solid var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 2%;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.warning h3 {
+    font-size: 1.25rem;
+    font-family: "Open Sans";
+    font-weight: bold;
+    color: var(--red);
+}
+
+.btn {
+    width: 100%;
+    display: grid;
+    padding: 4%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.btn button {
+    cursor: pointer;
+}
+
+.btn button:first-of-type {
+    background-color: var(--red);
+    border: 2px solid var(--red);
+    height: 42px;
+    color: var(--white);
+    font-family: "Open Sans";
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn button:first-of-type:hover {
+    color: var(--red);
+    background-color: transparent;
+}
+
+.btn button:last-of-type {
+    background-color: transparent;
+    border: none;
+    height: 42px;
+    color: var(--black);
+    font-size: 0.9rem;
+    font-family: "Open Sans";
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn button:last-of-type:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 850px) {
+    #editUser > div {
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+    }
+}
